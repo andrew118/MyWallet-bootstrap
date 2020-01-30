@@ -4,3 +4,15 @@ body {
 	color: #f2f2f2;
 	font-family: 'Dosis', sans-serif;
 }
+
+.font-lobster {
+	font-family: 'Lobster';
+}
+
+.letter-spacing-4 {
+	letter-spacing: 4px;
+}
+
+.letter-spacing-2 {
+	letter-spacing: 2px;
+}
