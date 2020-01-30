@@ -13,6 +13,6 @@ body {
 	letter-spacing: 4px;
 }
 
-.letter-spacing-2 {
+.letter-spacing-2, strong {
 	letter-spacing: 2px;
 }
