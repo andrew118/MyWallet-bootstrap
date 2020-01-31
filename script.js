@@ -1,3 +1,6 @@
+var loginOk = "andrew";
+var passOk = "123";
+
 function checkForm() {
 	var userLogin = document.getElementById("login").value;
 	var userPassword = document.getElementById("passWord").value;
