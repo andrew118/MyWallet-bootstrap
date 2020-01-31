@@ -46,6 +46,13 @@ body {
     float:none;
 }
 
+@media (max-width: 767px) {
+	.navbar-nav {
+		display: flex;
+		text-align: left;
+	}
+}
+
 @media (min-width: 992px) {
 	li.nav-item {
 	min-width: 170px !important;
