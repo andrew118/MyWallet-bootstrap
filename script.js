@@ -1,13 +1,18 @@
-var loginOk = "andrew";
-var passOk = "123";
+var login = "andrew";
+var pass = "123";
 
 function checkForm() {
 	var userLogin = document.getElementById("login").value;
 	var userPassword = document.getElementById("passWord").value;
 	
-	if ((loginOk !== userLogin) || (passOk !== userPassword)) {
+	if ((login !== userLogin) || (pass !== userPassword)) {
 			document.getElementById("info").style.display = "block";
 	} else {			
 			location.href = 'main.html';
 	}
+}
+
+function comparePassword () {
+	var password1 = document.getElementById("passWord").value;
+	var password2 = document.getElementById("passwordCompare").value;
 }
