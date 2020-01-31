@@ -13,6 +13,23 @@
     
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 		<link rel="stylesheet" href="style.css" type="text/css" />
+		
+		<script>
+			var loginOk = "andrew";
+			var passOk = "123";
+			
+			function checkForm() {
+				var userLogin = document.getElementById("login").value;
+				var userPassword = document.getElementById("passWord").value;
+				
+				if ((loginOk !== userLogin) || (passOk !== userPassword)) {
+						document.getElementById("info").style.display = "block";
+				} else {			
+						setTimeout("location.href = 'main.html';", 500);
+				}
+			}
+		</script> 
+		
     <title>MyWallet | Weź w garść swoje pieniądze już dziś</title>
 		
   </head>
@@ -35,24 +52,27 @@
 					</div>
 				</header>
 				
+				<div id="info" class="alert alert-danger col-4 mx-auto text-center" style="display: none;" role="alert">
+					Niepoprawne dane!
+				</div>
 				
 				<section>
 					
 					<div class="row">
 						<div class="col-10 col-sm-8 col-md-6 col-lg-4 mx-auto rounded" style="border: 1px #f2f2f2 dashed; background-color: rgba(242, 242, 242, 0.2); ">
 							
-							<form action="login.php">
+							<form action="#">
 								
 								<div class="col-10 offset-1">
-									<input type="text" class="form-control mt-5 mb-3" id="login" placeholder="Podaj login" name="login" required>
+									<input type="text" class="form-control mt-5 mb-3" id="login" placeholder="Podaj login" name="login">
 								</div>
 								
 								<div class="col-10 offset-1">
-									<input type="password" class="form-control mb-3" id="passWord" placeholder="Podaj hasło" name="passWord" required>
+									<input type="password" class="form-control mb-2" id="passWord" placeholder="Podaj hasło" name="passWord">
 								</div>
 								
 								<div class="col-10 offset-1">
-									<input type="submit" class="btn btn-success btn-block mb-4 font-weight-bold" value="Zaloguj">
+									<input type="button" class="btn btn-success btn-block mb-4 font-weight-bold" value="Zaloguj" onclick="checkForm()">
 								</div>
 								
 								<div class="col-10 offset-1">
@@ -83,7 +103,7 @@
 					
 				</article>
 				
-<footer class="fixed-bottom text-center bg-dark text-white-50" style="border-top: 1px #f2f2f2 dashed">
+				<footer class="fixed-bottom text-center bg-dark text-white-50" style="border-top: 1px #f2f2f2 dashed">
 					Created by &copy; ANDREW
 				</footer>
 				
@@ -94,5 +114,6 @@
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+		
   </body>
 </html>
