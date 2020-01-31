@@ -9,7 +9,9 @@ function checkForm() {
 	if ((login !== userLogin) || (pass !== userPassword)) {
 			document.getElementById("info").style.display = "block";
 	} else {			
-			location.href = 'main.html';
+			document.getElementById("info").style.display = "none";
+			document.getElementById("infoOk").style.display = "block"
+			setTimeout("location.href = 'main.html';", 1500);
 	}
 }
 
@@ -26,6 +28,7 @@ function comparePassword () {
 		
 		document.getElementById("info").style.display = "none";
 		document.getElementById("infoOk").style.display = "block"
+		
 		setTimeout("location.href = 'index.html';", 1500);
 	}
 }
