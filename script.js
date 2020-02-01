@@ -21,15 +21,29 @@ function comparePassword () {
 	var password2 = document.getElementById("passwordCompare").value;
 	
 	if (password1 !== password2) {
+		document.getElementById("info").innerHTML = "Hasła nie zgadzają się!";
 		document.getElementById("info").style.display = "block";
 	} else {
-		login = document.getElementById("login").value;
-		pass = password1;
-		email = document.getElementById("passWord").value;
-		
+		document.getElementById("info").style.display = "none";
+	}
+}
+
+function registerValid() {
+	login = document.getElementById("login").value;
+	pass = document.getElementById("passWord").value;
+	var passToCompare = document.getElementById("passwordCompare").value;
+	email = document.getElementById("passWord").value;
+	
+	if (login === "" || pass === "" || email === "") {
+		document.getElementById("info").innerHTML = "Uzupełnij wszystkie pola!";
+		document.getElementById("info").style.display = "block";
+	} else if (pass !== passToCompare) {
+		document.getElementById("info").innerHTML = "Hasła nie zgadzają się!";
+		document.getElementById("info").style.display = "block";
+	} else {
 		document.getElementById("info").style.display = "none";
 		document.getElementById("infoOk").style.display = "block"
-		
+	
 		setTimeout("location.href = 'index.html';", 1500);
 	}
 }
