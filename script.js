@@ -1,6 +1,7 @@
 var login = "andrew";
 var pass = "123";
 var email = "";
+var today = new Date();
 
 function checkForm() {
 	var userLogin = document.getElementById("login").value;
@@ -32,3 +33,24 @@ function comparePassword () {
 		setTimeout("location.href = 'index.html';", 1500);
 	}
 }
+
+function checkWeekday() {
+	var daysNames = ["niedziela", "poniedziałek", "wtorek", "środa", "czwartek", "piątek", "sobota"];
+	var weekday = daysNames[today.getDay()];
+	
+	return weekday;
+}
+
+function welcome() {
+	var today = checkWeekday();
+	
+	document.getElementById("userWelcome").innerHTML = login;
+	
+	if (today === "sobota" || today === "niedziela") {
+		today += ". Może imprezka? Albo wypadzik na miasto? &#9787;"
+	} else {
+		today += ". Praca, praca, praca... &#9822;"
+	}
+	document.getElementById("dayOfWeek").innerHTML = today;
+	
+	}
