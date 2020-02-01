@@ -39,7 +39,7 @@
 				</header>
 				
 				<div id="info" class="alert alert-danger col-10 col-sm-8 col-md-6 col-lg-4 mx-auto text-center" style="display: none;" role="alert">
-					Hasła nie zgadzają się!
+					
 				</div>
 				
 				<div id="infoOk" class="alert alert-success col-10 col-sm-8 col-md-6 col-lg-4 mx-auto text-center" style="display: none;" role="alert">
@@ -62,7 +62,7 @@
 								</div>
 								
 								<div class="col-10 offset-1">
-									<input type="password" class="form-control mb-3" id="passwordCompare" placeholder="Powtórz hasło">
+									<input type="password" class="form-control mb-3" id="passwordCompare" placeholder="Powtórz hasło" onblur="comparePassword()">
 								</div>
 								
 								<div class="col-10 offset-1">
@@ -70,7 +70,7 @@
 								</div>
 								
 								<div class="col-10 offset-1">
-									<input type="button" class="btn btn-info btn-block mb-5 font-weight-bold" value="Zarejestruj się" onclick="comparePassword()">
+									<input type="button" class="btn btn-info btn-block mb-5 font-weight-bold" value="Zarejestruj się" onclick="registerValid()">
 								</div>
 								
 							</form>
