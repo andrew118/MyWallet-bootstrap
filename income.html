@@ -89,40 +89,53 @@
 						
 						<h1 class="h4 mt-4 mb-3 font-weight-bold">Dodaj swoje przychody</h2>
 						
-						<div class="col-12 rounded" style="border: 2px #f2f2f2 dashed">
+						<div class="col-12 p-3 rounded" style="border: 2px #f2f2f2 dashed">
 							<form action="#">
-							<div>
-								<label for="money">Podaj kwotę</label>
-								<input type="number" step="0.01" id="money">
-							</div>
-							
-							<div>
-								<label for="dater">Podaj datę</label>
-								<input type="date" id="dater">
-							</div>
-							
-							<div>
-								<fieldset>
-									<legend>Kategoria przychodu</legend>
-										<input type="radio" name="category" id="radio1" value="salary" checked>
-											<label for="radio1">Wynagrodzenie</label>
-										
-										<input type="radio" name="category" id="radio2" value="interest">
-											<label for="radio2">Odsetki bankowe</label>
-										
-										<input type="radio" name="category" id="radio3" value="allegro">
-											<label for="radio3">Sprzedaż na allegro</label>
-										
-										<input type="radio" name="category" id="radio4" value="other">
-											<label for="radio4">Inne</label>
-										
-										<input type="text" name="comment" placeholder="Komentarz">						
-								</fieldset>
-							</div>
-							
-							<div><input type="submit" value="Dodaj"></div>
-							<div><input type="button" value="Anuluj"></div>
-						</form>
+															
+								<div class="col-md-6 col-lg-5">
+									<label class="sr-only">Kwota</label>
+										<div class="input-group input-group-lg">
+											<div class="input-group-prepend">
+												<span class="input-group-text px-2">Kwota</span>
+											</div>
+											<input type="number" class="form-control" step="0.01" id="money">
+										</div>
+								</div>
+								
+								<div class="col-md-6 col-lg-5 mt-2 mb-4">
+									<label class="sr-only">Data</label>
+										<div class="input-group input-group-lg">
+											<div class="input-group-prepend">
+												<span class="input-group-text px-3">Data</span>
+											</div>
+											<input type="date" class="form-control" id="dater">
+										</div>
+								</div>
+																
+								<div>
+																
+									<fieldset>
+										<legend class="">Kategoria przychodu</legend>
+											<input type="radio" name="category" id="radio1" value="salary" checked>
+												<label for="radio1">Wynagrodzenie</label>
+											
+											<input type="radio" name="category" id="radio2" value="interest">
+												<label for="radio2">Odsetki bankowe</label>
+											
+											<input type="radio" name="category" id="radio3" value="allegro">
+												<label for="radio3">Sprzedaż na allegro</label>
+											
+											<input type="radio" name="category" id="radio4" value="other">
+												<label for="radio4">Inne</label>
+											
+											<input type="text" name="comment" placeholder="Komentarz">						
+									</fieldset>
+								</div>
+								
+								<div><input type="submit" value="Dodaj"></div>
+								<div><input type="button" value="Anuluj"></div>
+								
+							</form>
 						</div>
 						
 					</div>
