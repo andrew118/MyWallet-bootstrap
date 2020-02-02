@@ -47,11 +47,11 @@
 						
 							<ul class="navbar-nav">
 								
-								<li class="nav-item active">
+								<li class="nav-item">
 									<a class="nav-link" href="income.html"><i class="icon-money"></i> Dodaj przychód </a>
 								</li>
 								
-								<li class="nav-item">
+								<li class="nav-item active">
 									<a class="nav-link" href="expanse.html"><i class="icon-basket"></i> Dodaj wydatek </a>
 								</li>
 								
@@ -111,10 +111,19 @@
 											<input type="date" class="form-control" id="dater" value="">
 										</div>
 								</div>
+								
+								<div class="col mt-2 mb-4">
+									<label class="mr-sm-2" for="paymentMethod">Metoda płatności</label>
+										<select class="custom-select mr-sm-2" id="paymentMethod">
+											<option value="0">Gotówka</option>
+											<option value="1" default>Karta debetowa</option>
+											<option value="2">Karta kredytowa</option>
+										</select>
+								</div>
 																
 								<div class="col mt-2 mb-4">
-									<label class="mr-sm-2" for="categoty">Kategoria</label>
-									<select class="custom-select mr-sm-2" id="categoty">
+									<label class="mr-sm-2" for="categotyExpanse">Kategoria</label>
+									<select class="custom-select mr-sm-2" id="categotyExpanse">
 										<option value="0">Jedzenie</option>
 										<option value="1">Mieszkanie</option>
 										<option value="2">Transport</option>
