@@ -85,79 +85,240 @@
 				</header>
 				
 				<article>
-					<h1 class="h4 mt-4 mb-3 font-weight-bold text-center">Dostosuj aplikację MyWallet do swoich potrzeb</h2>
+					<h1 class="h4 mt-4 mb-3 font-weight-bold">Dostosuj aplikację <span class="font-lobster">MyWallet</span> do swoich potrzeb</h2>
 					
-					<div class="row mx-2">
-						
-						<div class="col-sm-10 col-md-8 col-lg-6 mx-auto p-3 rounded" style="border: 2px #f2f2f2 dashed">
+					<div class="row">									
+						<div class="col-md-5 rounded mx-auto mb-5" style="border: 2px #f2f2f2 dashed">
+							
+							<h3 class="h4 font-weight-bold">Zmień swoje dane</h3>
+							
 							<form action="#">
-															
-								<div class="col">
-									<label class="sr-only">Kwota</label>
-										<div class="input-group input-group-lg">
-											<div class="input-group-prepend">
-												<span class="input-group-text px-2">Kwota</span>
-											</div>
-											<input type="number" class="form-control" step="0.01" id="money" value="0.00">
-										</div>
+							
+								<div>
+									<label class="mr-sm-2" for="newLogin">Nowy login</label>
+									<input type="text" class="form-control mb-3" id="newLogin">
 								</div>
-								
-								<div class="col mt-2 mb-4">
-									<label class="sr-only">Data</label>
-										<div class="input-group input-group-lg">
-											<div class="input-group-prepend">
-												<span class="input-group-text px-3">Data</span>
-											</div>
-											<input type="date" class="form-control" id="dater" value="">
-										</div>
-								</div>
-								
-								<div class="col mt-2 mb-4">
-									<label class="mr-sm-2" for="paymentMethod">Metoda płatności</label>
-										<select class="custom-select mr-sm-2" id="paymentMethod">
-											<option value="0">Gotówka</option>
-											<option value="1" default>Karta debetowa</option>
-											<option value="2">Karta kredytowa</option>
-										</select>
-								</div>
-																
-								<div class="col mt-2 mb-4">
-									<label class="mr-sm-2" for="categotyExpanse">Kategoria</label>
-									<select class="custom-select mr-sm-2" id="categotyExpanse">
-										<option value="0">Jedzenie</option>
-										<option value="1">Mieszkanie</option>
-										<option value="2">Transport</option>
-										<option value="3">Telekomunikacja</option>
-										<option value="4">Ochrona zdrowia</option>
-										<option value="5">Odzież</option>
-										<option value="6">Higiena</option>
-										<option value="7">Dzieci</option>
-										<option value="8">Rozrywka</option>
-										<option value="9">Wycieczka</option>
-										<option value="10">Szkolenia</option>
-										<option value="11">Książki</option>
-										<option value="12">Oszczędności</option>
-										<option value="13">Emerytura</option>
-										<option value="14">Spłata długów</option>
-										<option value="15">Darowizna</option>
-										<option value="15">Inne</option>
-									</select>
-									
-								
-									<div class="form-group mt-2 mb-4">
-										<label for="comment" class="sr-only">Komentarz</label>
-										<input type="text" class="form-control" id="comment" placeholder="Komentarz (opcjonalnie)" aria-describedby="commentHelp">
-										<small id="commentHelp" class="form-text text-warning text-right">Dodatkowy opis, np. weekend w górach, obiad na mieście itp.</small>
-									</div>
-								</div>
-								
-								<input type="button" class="btn btn-lg btn-block btn-success mb-4" value="Zapisz">
-								<input type="button" class="btn btn-sm btn-block btn-outline-danger" value="Anuluj">
 
+								<div>
+									<label class="mr-sm-2" for="newPassword">Zmień hasło</label>
+									<input type="password" class="form-control mb-3" id="newPassword">
+								</div>
+								
+								<div>
+									<label class="mr-sm-2" for="newEmail">Zmień e-mail</label>
+									<input type="email" class="form-control mb-3" id="newEmail">
+								</div>
+								
+								<div class="mt-4 mb-2 mx-5">
+									<input type="button" class="btn btn-lg btn-block btn-success mb-3" value="Zapisz">
+								</div>
+								
 							</form>
+							
 						</div>
 						
+						<div class="col-md-5 rounded mx-auto mb-5" style="border: 2px #f2f2f2 dashed">
+							
+							<h3 class="h4 font-weight-bold mb-4">Edytuj metody płatności</h3>
+							
+							<h3 class="h5 font-weight-bold mb-2">Wybierz metody do usunięcia</h3>
+							
+							<form action="#">
+							
+								<div class="form-check">
+									<label class="form-check-label">
+										<input type="checkbox" class="form-check-input" style="margin-top: .6rem;" value="0">Gotówka
+									</label>
+								</div>
+								
+								<div class="form-check">
+									<label class="form-check-label">
+										<input type="checkbox" class="form-check-input"style="margin-top: .6rem;" value="1">Karta debetowa
+									</label>
+								</div>
+								
+								<div class="form-check">
+									<label class="form-check-label">
+										<input type="checkbox" class="form-check-input" style="margin-top: .6rem;" value="2">Karta kredytowa
+									</label>
+								</div>
+								
+								<h3 class="h5 font-weight-bold mb-2 mt-4">Dodaj inną metodę płatności</h3>
+								
+								<div>
+									<label class="sr-only" for="editPayment">Nowy rodzaj płatności</label>
+									<input type="text" class="form-control mb-3" id="editPayment">
+								</div>
+								
+								<div class="mt-4 mb-2 mx-5">
+									<input type="button" class="btn btn-lg btn-block btn-success mb-3" value="Zapisz">
+								</div>
+								
+							</form>
+							
+						</div>
 					</div>
+					
+					<div class="row">
+						<div class="col-md-5 mx-auto rounded" style="border: 2px #f2f2f2 dashed">
+							<h3 class="h4 font-weight-bold mb-4">Edytuj rodzaje przychodów</h3>
+							
+							<h3 class="h5 font-weight-bold mb-2">Wybierz kategorie do usunięcia</h3>
+							
+							<form action="#">
+							
+								<div class="form-check">
+									<label class="form-check-label">
+										<input type="checkbox" class="form-check-input" style="margin-top: .6rem;" value="0">Wynagrodzenie
+									</label>
+								</div>
+								
+								<div class="form-check">
+									<label class="form-check-label">
+										<input type="checkbox" class="form-check-input"style="margin-top: .6rem;" value="1">Odsetki bankowe
+									</label>
+								</div>
+								
+								<div class="form-check">
+									<label class="form-check-label">
+										<input type="checkbox" class="form-check-input" style="margin-top: .6rem;" value="2">Sprzedaż na allegro
+									</label>
+								</div>
+								
+								<h3 class="h5 font-weight-bold mb-2 mt-4">Dodaj inną kategorię przychodów</h3>
+								
+								<div>
+									<label class="sr-only" for="editIncomes">Nowy rodzaj płatności</label>
+									<input type="text" class="form-control mb-3" id="editIncomes">
+								</div>
+								
+								<div class="mt-4 mb-2 mx-5">
+									<input type="button" class="btn btn-lg btn-block btn-success mb-3" value="Zapisz">
+								</div>
+								
+							</form>
+						</div>
+					
+						<div class="col-md-5 mx-auto rounded" style="border: 2px #f2f2f2 dashed">
+							
+							<h3 class="h4 font-weight-bold mb-4">Edytuj kategorie wydatków</h3>
+							
+							<h3 class="h5 font-weight-bold mb-2">Wybierz kategorie usunięcia</h3>
+							
+							<form action="#">
+							
+								<div class="form-check-inline">
+									<label class="form-check-label">
+										<input type="checkbox" class="form-check-input" style="margin-top: .6rem;" value="0">Jedzenie
+									</label>
+								</div>
+								
+								<div class="form-check-inline">
+									<label class="form-check-label">
+										<input type="checkbox" class="form-check-input" style="margin-top: .6rem;" value="1">Mieszkanie
+									</label>
+								</div>
+								
+								<div class="form-check-inline">
+									<label class="form-check-label">
+										<input type="checkbox" class="form-check-input" style="margin-top: .6rem;" value="2">Transport
+									</label>
+								</div>
+								
+								<div class="form-check-inline">
+									<label class="form-check-label">
+										<input type="checkbox" class="form-check-input" style="margin-top: .6rem;" value="3">Telekomunikacja
+									</label>
+								</div>
+								
+								<div class="form-check-inline">
+									<label class="form-check-label">
+										<input type="checkbox" class="form-check-input" style="margin-top: .6rem;" value="4">Ochrona zdrowia
+									</label>
+								</div>
+								
+								<div class="form-check-inline">
+									<label class="form-check-label">
+										<input type="checkbox" class="form-check-input" style="margin-top: .6rem;" value="5">Odzież
+									</label>
+								</div>
+								
+								<div class="form-check-inline">
+									<label class="form-check-label">
+										<input type="checkbox" class="form-check-input" style="margin-top: .6rem;" value="6">Higiena
+									</label>
+								</div>
+								
+								<div class="form-check-inline">
+									<label class="form-check-label">
+										<input type="checkbox" class="form-check-input" style="margin-top: .6rem;" value="7">Dzieci
+									</label>
+								</div>
+								
+								<div class="form-check-inline">
+									<label class="form-check-label">
+										<input type="checkbox" class="form-check-input" style="margin-top: .6rem;" value="8">Rozrywka
+									</label>
+								</div>
+								
+								<div class="form-check-inline">
+									<label class="form-check-label">
+										<input type="checkbox" class="form-check-input" style="margin-top: .6rem;" value="9">Wycieczka
+									</label>
+								</div>
+								
+								<div class="form-check-inline">
+									<label class="form-check-label">
+										<input type="checkbox" class="form-check-input" style="margin-top: .6rem;" value="10">Szkolenia
+									</label>
+								</div>
+								
+								<div class="form-check-inline">
+									<label class="form-check-label">
+										<input type="checkbox" class="form-check-input" style="margin-top: .6rem;" value="11">Książki
+									</label>
+								</div>
+								
+								<div class="form-check-inline">
+									<label class="form-check-label">
+										<input type="checkbox" class="form-check-input" style="margin-top: .6rem;" value="12">Oszczędności
+									</label>
+								</div>
+								
+								<div class="form-check-inline">
+									<label class="form-check-label">
+										<input type="checkbox" class="form-check-input" style="margin-top: .6rem;" value="13">Emerytura
+									</label>
+								</div>
+								
+								<div class="form-check-inline">
+									<label class="form-check-label">
+										<input type="checkbox" class="form-check-input" style="margin-top: .6rem;" value="14">Spłata długów
+									</label>
+								</div>
+								
+								<div class="form-check-inline">
+									<label class="form-check-label">
+										<input type="checkbox" class="form-check-input" style="margin-top: .6rem;" value="15">Darowizna
+									</label>
+								</div>
+								
+								<h3 class="h5 font-weight-bold mb-2 mt-4">Dodaj inną kategorię wydatków</h3>
+								
+								<div>
+									<label class="sr-only" for="editExpanses">Nowy rodzaj płatności</label>
+									<input type="text" class="form-control mb-3" id="editExpanses">
+								</div>
+								
+								<div class="mt-4 mb-2 mx-5">
+									<input type="button" class="btn btn-lg btn-block btn-success mb-3" value="Zapisz">
+								</div>
+								
+							</form>
+
+						</div>
+					</div>
+					
 				</article>
 				
 				<footer class="fixed-bottom text-center bg-dark text-white-50" style="border-top: 1px #f2f2f2 dashed">
