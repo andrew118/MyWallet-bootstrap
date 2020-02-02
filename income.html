@@ -85,14 +85,14 @@
 				</header>
 				
 				<article>
+					<h1 class="h4 mt-4 mb-3 font-weight-bold text-center">Dodaj swoje przychody</h2>
+					
 					<div class="row mx-2">
 						
-						<h1 class="h4 mt-4 mb-3 font-weight-bold">Dodaj swoje przychody</h2>
-						
-						<div class="col-12 p-3 rounded" style="border: 2px #f2f2f2 dashed">
+						<div class="col-sm-10 col-md-8 col-lg-6 mx-auto p-3 rounded" style="border: 2px #f2f2f2 dashed">
 							<form action="#">
 															
-								<div class="col-md-6 col-lg-5">
+								<div class="col">
 									<label class="sr-only">Kwota</label>
 										<div class="input-group input-group-lg">
 											<div class="input-group-prepend">
@@ -102,7 +102,7 @@
 										</div>
 								</div>
 								
-								<div class="col-md-6 col-lg-5 mt-2 mb-4">
+								<div class="col mt-2 mb-4">
 									<label class="sr-only">Data</label>
 										<div class="input-group input-group-lg">
 											<div class="input-group-prepend">
@@ -112,29 +112,28 @@
 										</div>
 								</div>
 																
-								<div>
-																
-									<fieldset>
-										<legend class="">Kategoria przychodu</legend>
-											<input type="radio" name="category" id="radio1" value="salary" checked>
-												<label for="radio1">Wynagrodzenie</label>
-											
-											<input type="radio" name="category" id="radio2" value="interest">
-												<label for="radio2">Odsetki bankowe</label>
-											
-											<input type="radio" name="category" id="radio3" value="allegro">
-												<label for="radio3">Sprzedaż na allegro</label>
-											
-											<input type="radio" name="category" id="radio4" value="other">
-												<label for="radio4">Inne</label>
-											
-											<input type="text" name="comment" placeholder="Komentarz">						
-									</fieldset>
+								<div class="col mt-2 mb-4">
+									<label class="mr-sm-2" for="categoty">Kategoria</label>
+									<select class="custom-select mr-sm-2" id="categoty">
+										<option value="1">Wynagrodzenie</option>
+										<option value="2">Odsetki bankowe</option>
+										<option value="3">Sprzedaż na allegro</option>
+										<option value="4">Inne</option>
+									</select>
+									
+								
+									<div class="form-group mt-2 mb-4">
+										<label for="comment" class="sr-only">Komentarz</label>
+										<input type="text" class="form-control" id="comment" placeholder="Komentarz (opcjonalnie)" aria-describedby="commentHelp">
+										<small id="commentHelp" class="form-text text-warning text-right">Dodatkowy opis, np. sprzedany rower, dywidendy itp.</small>
+									</div>
 								</div>
 								
-								<div><input type="submit" value="Dodaj"></div>
-								<div><input type="button" value="Anuluj"></div>
-								
+								<div class="btn-group btn-block">
+									<input type="button" class="btn btn-lg btn-group btn-success" value="Dodaj">
+									<input type="button" class="btn btn-lg btn-group btn-outline-danger" value="Anuluj">
+								</div>
+
 							</form>
 						</div>
 						
