@@ -26,3 +26,6 @@ function putTodayDate () {
 	document.getElementById("dater").value = wholeDate;
 }
 
+window.onload = function () {
+	putTodayDate();
+}
