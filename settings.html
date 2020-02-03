@@ -62,7 +62,7 @@
 										
 										<a class="dropdown-item" href="balance.html"> Bierzący miesiąc </a>
 										<a class="dropdown-item" href="balance.html"> Poprzedni miesiąc </a>
-										<a class="dropdown-item" href="balance.html"> Inny zakres </a>
+										<button class="dropdown-item btn btn-link"  data-toggle="modal" data-target="#dateRangeModal"> Inny zakres </button>
 										
 									</div>
 									
@@ -83,6 +83,39 @@
 					</nav>
 					
 				</header>
+				
+								<!-- MODAL STARTS HERE -->
+				<div class="modal fade" id="dateRangeModal" tabindex="-1" role="dialog" aria-labelledby="dateRangeInput" aria-hidden="true">
+					<div class="modal-dialog modal-dialog-centered" role="document">
+						<div class="modal-content">
+							<div class="modal-header">
+								<h5 class="modal-title text-dark font-weight-bold" id="dateRangeInput">Podaj zakres dat</h5>
+								<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+									<span aria-hidden="true">&times;</span>
+								</button>
+							</div>
+							
+							<div class="modal-body">
+								<div class="row">
+									<div class="col-sm-6">
+										<h6 class="h6 text-dark">Podaj datę początkową</h6>
+										<input type="date" class="mb-3 rounded" id="beginDate">
+									</div>
+									
+									<div class="col-sm-6">
+										<h6 class="h6 text-dark">Podaj datę końcową</h6>
+										<input type="date" class="mb-2 rounded" id="endDate">
+									</div>
+								</div>
+							</div>
+							
+							<div class="modal-footer">
+								<button type="button" class="btn btn-success">Zastosuj</button>
+								<button type="button" class="btn btn-outline-danger" data-dismiss="modal">Porzuć pomysł</button>
+							</div>
+						</div>
+					</div>
+				</div>
 				
 				<article>
 					<h1 class="h4 mt-4 mb-3 font-weight-bold">Dostosuj aplikację <span class="font-lobster">MyWallet</span> do swoich potrzeb</h2>
